@@ -21,7 +21,7 @@ Next, on how to use it.
 ```
 > node bin/index.js <amount> <currency>
 ```
-Will convert the "<amount>" of "<currency>" into the other <currency> that we have to specify after the first "<currency>".
+Will convert the "amount" of "currency" into the other <currency> that we have to specify after the first "currency".
 For instance :
 ```
 > node bin/index.js 100 usd eur aud cad
