@@ -7,11 +7,15 @@ const currencies = require('../lib/currencies.json');
 
 const API = 'https://api.fixer.io/latest';
 
+
+
 const convert = configuration => {
   const {amount, to, from, response, loading} = configuration;
 
   money.base = response.body.base;
   money.rates = response.body.rates;
+
+
 
   to.forEach(item => {
     if (currencies[item]) {
@@ -55,6 +59,8 @@ const cash = async command => {
 
   try {
     const response = await got(API, {'json': true});
+
+
 
     convert({amount, to, from, response, loading});
   } catch (err) {
